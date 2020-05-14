@@ -1,0 +1,42 @@
+Introductions
+
+1.Signup with least 8 element
+2.All verification in front end except captcha
+
+3.Join Date calculated in signupAction
+4.username is login credential different from actual user_name i.e. Real name
+
+5.We store most values in session itself
+
+6.Logic to find the current age at the time of making report
+
+$sql="select * from users where user_id=1";
+$result = mysqli_query($con,$sql);
+
+$data=mysqli_fetch_assoc($result);
+
+$b_date=$data['user_bdate'];
+$date = DateTime::createFromFormat("Y-m-d", $b_date);
+echo date('Y')-$date->format("Y");
+
+7. Logic to convert date into string
+$sql="select * from users where user_id=1";
+$result = mysqli_query($con,$sql);
+
+$data=mysqli_fetch_assoc($result);
+
+$b_date=$data['user_bdate'];
+$b_date=date('Y-m-d', strtotime($b_date));
+
+
+8.med_report.php for reports
+
+9. Profile page user
+      mobile no,password
+
+10. /// for userconn.php and doconn.php
+  Connection to prescription always their as we have doc_id in user_med
+    0 means requested Doctor
+    1 means connected Doctor
+    action 2 delete record by patient i.e. requested
+    action 3 means doctor will remove connection i.e apprroved

@@ -1,0 +1,5 @@
+doctor disabled == 0   -----done
+mysqli_query== throw error----------done
+session handling on backend files---------remaining
+manage doc list shown to patient-------done
+add enabling of the doctor under 2nd tab
